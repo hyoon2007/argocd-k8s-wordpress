@@ -1,0 +1,95 @@
+apiVersion: v1
+entries:
+  mysql:
+  - annotations:
+      category: Database
+      images: |
+        - name: mysql
+          image: docker.io/bitnami/mysql:8.4.2-debian-12-r2
+        - name: mysqld-exporter
+          image: docker.io/bitnami/mysqld-exporter:0.15.1-debian-12-r29
+        - name: os-shell
+          image: docker.io/bitnami/os-shell:12-debian-12-r26
+      licenses: Apache-2.0
+    apiVersion: v2
+    appVersion: 8.4.2
+    created: "2024-09-29T22:06:37.983896+09:00"
+    dependencies:
+    - name: common
+      repository: oci://registry-1.docker.io/bitnamicharts
+      tags:
+      - bitnami-common
+      version: 2.x.x
+    description: MySQL is a fast, reliable, scalable, and easy to use open source
+      relational database system. Designed to handle mission-critical, heavy-load
+      production applications.
+    digest: 6b1357286cc53fb574e0c6984b4f7d4e5e14cb084034f48b7146eccdf87dd0cb
+    home: https://bitnami.com
+    icon: https://bitnami.com/assets/stacks/mysql/img/mysql-stack-220x234.png
+    keywords:
+    - mysql
+    - database
+    - sql
+    - cluster
+    - high availability
+    maintainers:
+    - name: Broadcom, Inc. All Rights Reserved.
+      url: https://github.com/bitnami/charts
+    name: mysql
+    sources:
+    - https://github.com/bitnami/charts/tree/main/bitnami/mysql
+    urls:
+    - https://hyoon2007.github.io/argocd-k8s-wordpress/mysql-11.1.14.tgz
+    version: 11.1.14
+  wordpress:
+  - annotations:
+      category: CMS
+      images: |
+        - name: apache-exporter
+          image: docker.io/bitnami/apache-exporter:1.0.8-debian-12-r6
+        - name: os-shell
+          image: docker.io/bitnami/os-shell:12-debian-12-r27
+        - name: wordpress
+          image: docker.io/bitnami/wordpress:6.6.1-debian-12-r5
+      licenses: Apache-2.0
+    apiVersion: v2
+    appVersion: 6.6.1
+    created: "2024-09-29T22:06:37.990447+09:00"
+    dependencies:
+    - condition: memcached.enabled
+      name: memcached
+      repository: oci://registry-1.docker.io/bitnamicharts
+      version: 7.x.x
+    - condition: mariadb.enabled
+      name: mariadb
+      repository: oci://registry-1.docker.io/bitnamicharts
+      version: 19.x.x
+    - name: common
+      repository: oci://registry-1.docker.io/bitnamicharts
+      tags:
+      - bitnami-common
+      version: 2.x.x
+    description: WordPress is the world's most popular blogging and content management
+      platform. Powerful yet simple, everyone from students to global corporations
+      use it to build beautiful, functional websites.
+    digest: 72fd0e97022c753087a23dda8b82c199b74fd81c95c9cfd60e98db8a97180f8e
+    home: https://bitnami.com
+    icon: https://bitnami.com/assets/stacks/wordpress/img/wordpress-stack-220x234.png
+    keywords:
+    - application
+    - blog
+    - cms
+    - http
+    - php
+    - web
+    - wordpress
+    maintainers:
+    - name: Broadcom, Inc. All Rights Reserved.
+      url: https://github.com/bitnami/charts
+    name: wordpress
+    sources:
+    - https://github.com/bitnami/charts/tree/main/bitnami/wordpress
+    urls:
+    - https://hyoon2007.github.io/argocd-k8s-wordpress/wordpress-23.1.0.tgz
+    version: 23.1.0
+generated: "2024-09-29T22:06:37.980434+09:00"
