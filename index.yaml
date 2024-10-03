@@ -13,7 +13,7 @@ entries:
       licenses: Apache-2.0
     apiVersion: v2
     appVersion: 8.4.2
-    created: "2024-09-29T22:06:37.983896+09:00"
+    created: "2024-10-03T19:33:12.634055+09:00"
     dependencies:
     - name: common
       repository: oci://registry-1.docker.io/bitnamicharts
@@ -54,7 +54,7 @@ entries:
       licenses: Apache-2.0
     apiVersion: v2
     appVersion: 6.6.1
-    created: "2024-09-29T22:06:37.990447+09:00"
+    created: "2024-10-03T19:33:12.640139+09:00"
     dependencies:
     - condition: memcached.enabled
       name: memcached
@@ -72,7 +72,7 @@ entries:
     description: WordPress is the world's most popular blogging and content management
       platform. Powerful yet simple, everyone from students to global corporations
       use it to build beautiful, functional websites.
-    digest: 72fd0e97022c753087a23dda8b82c199b74fd81c95c9cfd60e98db8a97180f8e
+    digest: 0123e0728301bc6be5765c26aa19fe36a63e470c7485ffdf3157449b584353d4
     home: https://bitnami.com
     icon: https://bitnami.com/assets/stacks/wordpress/img/wordpress-stack-220x234.png
     keywords:
@@ -92,4 +92,4 @@ entries:
     urls:
     - https://hyoon2007.github.io/argocd-k8s-wordpress/wordpress-23.1.0.tgz
     version: 23.1.0
-generated: "2024-09-29T22:06:37.980434+09:00"
+generated: "2024-10-03T19:33:12.6291+09:00"
